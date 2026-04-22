@@ -14,7 +14,7 @@ const nextConfig = {
     locales: ['es'],
     defaultLocale: 'es',
   },
-  
+
   // Headers de seguridad
   async headers() {
     return [
