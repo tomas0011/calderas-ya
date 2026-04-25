@@ -26,12 +26,12 @@ export default function CTA() {
 
           {/* Botón CTA */}
           <WhatsAppButton size="lg" variant="secondary">
-            Contactar por WhatsApp
+            Coordinar visita
           </WhatsAppButton>
 
-          {/* Nota adicional */}
+          {/* Microcopy: qué pasa al hacer click */}
           <p className="text-primary-200 text-sm mt-6">
-            Respuesta inmediata • Sin compromiso • Presupuesto claro
+            Te respondemos rápido • Sin compromiso • Presupuesto claro desde el inicio
           </p>
         </div>
       </div>

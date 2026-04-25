@@ -43,9 +43,9 @@ export default function Hero() {
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <WhatsAppButton size="lg">
-              Hablar por WhatsApp
+              Consultar ahora
             </WhatsAppButton>
             
             <a
@@ -56,6 +56,11 @@ export default function Hero() {
               Llamar ahora
             </a>
           </div>
+
+          {/* Microcopy: qué pasa al hacer click */}
+          <p className="text-neutral-400 text-sm mb-8">
+            Respondemos en menos de 30 minutos • Sin turno previo para consultas
+          </p>
 
           {/* Indicador de confianza */}
           <div className="flex flex-wrap items-center justify-center gap-6 text-neutral-400 text-sm">

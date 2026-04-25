@@ -10,25 +10,25 @@ const servicios = [
   {
     id: 'reparacion',
     titulo: 'Reparación',
-    descripcion: 'Diagnóstico y reparación de fallas en calderas de todas las marcas. Solucionamos problemas de ignition, presión, agua caliente y calefacción.',
+    descripcion: 'Fallas de ignición, presión, agua caliente o calefacción. Revisamos y arreglamos en tu domicilio.',
     Icon: WrenchIcon,
   },
   {
     id: 'mantenimiento',
     titulo: 'Mantenimiento',
-    descripcion: 'Servicio de mantenimiento preventivo para garantizar el funcionamiento eficiente de tu caldera y prolongar su vida útil.',
+    descripcion: 'Revisión anual para que tu caldera funcione bien y no te deje sin calefacción en invierno.',
     Icon: ServiceIcon,
   },
   {
     id: 'instalacion',
     titulo: 'Instalación',
-    descripcion: 'Instalación profesional de calderas nuevas, reemplazo de equipos antiguos y adaptación de instalaciones existentes.',
+    descripcion: 'Colocamos calderas nuevas, reemplazamos equipos viejos y adaptamos la instalación.',
     Icon: ClipboardIcon,
   },
   {
     id: 'diagnostico',
     titulo: 'Diagnóstico',
-    descripcion: 'Análisis completo del estado de tu caldera. Presu-<br />puesto detallado sin compromiso antes de cualquier reparación.',
+    descripcion: 'Revisión completa con presupuesto detallado. Sin compromiso, pagás solo si aprobás.',
     Icon: MagnifierIcon,
   },
 ];
