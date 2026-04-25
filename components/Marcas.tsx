@@ -1,6 +1,6 @@
 /**
  * Sección de marcas con las que trabajan
- * Incluye disclaimer de independencia
+ * Incluye disclaimer de independencia y repuestos
  */
 
 import { config } from '@/lib/config';
@@ -30,9 +30,12 @@ export default function Marcas() {
 
         {/* Disclaimer legal - visible y claro */}
         <div className="max-w-2xl mx-auto">
-          <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-4 text-center">
+          <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-4 text-center space-y-3">
             <p className="text-sm text-neutral-600">
-              <span className="font-semibold text-neutral-800"> {config.disclaimer}</span>
+              <span className="font-semibold text-neutral-800">{config.disclaimer}</span>
+            </p>
+            <p className="text-sm text-neutral-600">
+              <span className="font-medium">{config.disclaimerRepuestos}</span>
             </p>
           </div>
         </div>

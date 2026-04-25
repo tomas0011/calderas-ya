@@ -1,6 +1,7 @@
 /**
  * Sección de zonas de cobertura geográfica
  * Muestra las áreas donde ofrecen servicio
+ * Ahora integrado con BuscadorCiudad
  */
 
 import { MapPinIcon } from './Icons';
@@ -71,10 +72,10 @@ export default function Zonas() {
           ))}
         </div>
 
-        {/* Nota adicional */}
-        <p className="text-center text-neutral-500 text-sm mt-8">
-          ¿Tu zona no está en la lista? <a href={config.whatsappUrl} className="text-primary-600 hover:underline font-medium">Consultanos</a> — podemos llegar a más localidades.
-        </p>
+{/* Nota adicional */}
+          <p className="text-center text-neutral-500 text-sm mt-8">
+            ¿Tu zona no está en la lista? <a href={config.whatsappUrl} className="text-primary-600 hover:underline font-medium">Consultanos</a> — llegamos a más localidades.
+          </p>
       </div>
     </section>
   );

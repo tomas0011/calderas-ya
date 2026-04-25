@@ -10,10 +10,10 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-neutral-900 text-neutral-300">
+    <footer id="contacto" className="bg-neutral-900 text-neutral-300">
       <div className="container-main py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Columna 1: Información de contacto */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Columna 1: Contacto */}
           <div>
             <h3 className="text-white font-bold text-lg mb-4">Contacto</h3>
             
@@ -60,17 +60,17 @@ export default function Footer() {
             <div className="flex items-start gap-3">
               <MapPinIcon className="w-5 h-5 flex-shrink-0 mt-0.5" />
               <div>
-                {config.coverage.map((zona) => (
+                {config.coverageZones.map((zona) => (
                   <p key={zona}>{zona}</p>
                 ))}
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Columna 4: Disclaimer */}
-          <div>
-            <h3 className="text-white font-bold text-lg mb-4">Información Legal</h3>
-            
+        {/* Disclaimer legal completo */}
+        <div className="border-t border-neutral-800 mt-8 pt-8">
+          <div className="bg-neutral-800/50 rounded-lg p-4 mb-4">
             <p className="text-sm text-neutral-400 leading-relaxed">
               {config.disclaimer}
             </p>
@@ -78,7 +78,7 @@ export default function Footer() {
         </div>
 
         {/* Barra inferior */}
-        <div className="border-t border-neutral-800 mt-10 pt-8">
+        <div className="border-t border-neutral-800 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-neutral-500">
               © {currentYear} {config.companyName}. Todos los derechos reservados.

@@ -2,23 +2,24 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Servicio Técnico de Calderas | Reparación y Mantenimiento en CABA y GBA",
-  description: "Servicio técnico independiente de calderas. Reparación, mantenimiento e instalación a domicilio en CABA y Gran Buenos Aires. Atención rápida y presupuestos claros.",
+  title: "Norte Clima - Servicio Técnico de Calderas en CABA y GBA",
+  description: "Servicio técnico independiente de calderas en Capital Federal y Gran Buenos Aires. Reparación, mantenimiento e instalación a domicilio. Atención rápida y presupuestos claros.",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
   keywords: ["servicio técnico calderas", "reparación calderas", "mantenimiento calderas", "calderas CABA", "calderas GBA", "técnico calderas", "instalación calderas"],
-  authors: [{ name: "Servicio Técnico de Calderas" }],
+  authors: [{ name: "Norte Clima" }],
   openGraph: {
-    title: "Servicio Técnico de Calderas | Reparación y Mantenimiento en CABA y GBA",
-    description: "Servicio técnico independiente de calderas. Reparación, mantenimiento e instalación a domicilio.",
+    title: "Norte Clima - Servicio Técnico de Calderas",
+    description: "Servicio técnico independiente de calderas. Reparación, mantenimiento e instalación a domicilio en CABA y GBA.",
     type: "website",
     locale: "es_AR",
-    siteName: "Servicio Técnico de Calderas",
+    siteName: "Norte Clima",
   },
   robots: {
     index: true,
     follow: true,
-  },
-  verification: {
-    google: "google-site-verification-code",
   },
 };
 

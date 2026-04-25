@@ -1,6 +1,7 @@
 /**
  * CTA Final - Llamada a la acción antes del footer
  * Bloque destacado para convertir visitantes en contactos
+ * Copy mejorado para conversions
  */
 
 import WhatsAppButton from './WhatsAppButton';
@@ -21,12 +22,12 @@ export default function CTA() {
           
           {/* Subtítulo */}
           <p className="text-lg text-primary-100 mb-8 max-w-xl mx-auto">
-            No esperes a que el problema empeore. Te atendemos ahora mismo.
+            Te respondemos rápido para evaluar tu caso y coordinar la visita si es necesaria.
           </p>
 
           {/* Botón CTA */}
           <WhatsAppButton size="lg" variant="secondary">
-            Coordinar visita
+            Hablar con un asesor
           </WhatsAppButton>
 
           {/* Microcopy: qué pasa al hacer click */}

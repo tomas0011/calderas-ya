@@ -1,6 +1,7 @@
 /**
  * Sección de beneficios/ventajas competitivas
  * Resalta los diferenciadores del servicio
+ * Sin frases genéricas tipo "líderes en el mercado"
  */
 
 import { CheckCircleIcon, MapPinIcon, ClockIcon, CurrencyIcon } from './Icons';
@@ -8,12 +9,12 @@ import { CheckCircleIcon, MapPinIcon, ClockIcon, CurrencyIcon } from './Icons';
 const beneficios = [
   {
     titulo: 'Atención rápida',
-    descripcion: 'Respondemos tu consulta y llegamos a tu domicilio en el menor tiempo posible.',
+    descripcion: 'Respondemos tu consulta en el menor tiempo posible y llegamos a tu domicilio rápido.',
     icon: ClockIcon,
   },
   {
     titulo: 'Servicio a domicilio',
-    descripcion: 'No necesitas trasladar tu caldera. Nuestro técnico va a tu casa.',
+    descripcion: 'No necesitás trasladar tu caldera. Nuestro técnico va a tu casa.',
     icon: MapPinIcon,
   },
   {
@@ -38,7 +39,7 @@ export default function Beneficios() {
             ¿Por qué elegirnos?
           </h2>
           <p className="section-subtitle">
-            La confianza de miles de clientes satisfechos en CABA y GBA
+            Servicio técnico local con atención personalizada
           </p>
         </div>
 

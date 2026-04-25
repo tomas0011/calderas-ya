@@ -1,6 +1,7 @@
 /**
  * Hero Section - Primera sección visible de la landing
  * Optimizada para conversión rápida a WhatsApp
+ * Nuevo branding: Norte Clima
  */
 
 import WhatsAppButton from './WhatsAppButton';
@@ -8,9 +9,9 @@ import { config } from '@/lib/config';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-700">
+    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-700 pt-16">
       {/* Fondo con patrón de calefacción/caldera - gradiente oscuro profesional */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtOS45NDEgMC0xOCA4LjA1OS0xOCAxOHM4LjA1OSAxOCAxOCAxOCAxOC04LjA1OSAxOC0xOC04LjA1OS0xOC0xOC0xOHptMCAzMmMtNy43MzIgMC0xNC02LjI2OC0xNC0xNHM2LjI2OC0xNCAxNC0xNCAxNCA2LjI2OCAxNCAxNC02LjI2OCAxNC0xNCAxNHoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAyIi8+PC9nPjwvc3ZnPg==')] opacity-30" />
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtOS45NDEgMC0xOCA4LjA1OS0xOCAxOHM4LjA1OSAxOCAxOCAxOCAxOC04LjA1OSAxOC0xOC04LjA1OS0xOC0xOHptMCAzMmMtNy43MzIgMC0xNC02LjI2OC0xNC0xNHM2LjI2OC0xNCAxNC0xNCAxNCA2LjI2OCAxNCAxNC02LjI2OCAxNC0xNCAxNHoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAyIi8+PC9nPjwvc3ZnPg==')] opacity-30" />
       
       {/* Overlay para mejorar legibilidad */}
       <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/80 via-neutral-900/40 to-transparent" />
@@ -24,7 +25,7 @@ export default function Hero() {
           {/* Badge de confianza */}
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm mb-6 border border-white/20">
             <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-            Atención rápida a domicilio
+            Servicio técnico a domicilio
           </div>
 
           {/* Título principal */}
@@ -37,7 +38,7 @@ export default function Hero() {
 
           {/* Subtítulo */}
           <p className="text-lg sm:text-xl text-neutral-300 mb-8 max-w-2xl mx-auto text-balance">
-            Atención rápida a domicilio para reparación, mantenimiento e instalación.
+            Reparación, mantenimiento e instalación a domicilio.
             <br />
             <span className="text-primary-300 font-medium">Técnicos con experiencia multimarca.</span>
           </p>
@@ -45,7 +46,7 @@ export default function Hero() {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <WhatsAppButton size="lg">
-              Consultar ahora
+              Consultar disponibilidad
             </WhatsAppButton>
             
             <a
@@ -59,14 +60,14 @@ export default function Hero() {
 
           {/* Microcopy: qué pasa al hacer click */}
           <p className="text-neutral-400 text-sm mb-8">
-            Respondemos en menos de 30 minutos • Sin turno previo para consultas
+            Te respondemos para evaluar tu caso y coordinar la visita si es necesaria
           </p>
 
           {/* Indicador de confianza */}
           <div className="flex flex-wrap items-center justify-center gap-6 text-neutral-400 text-sm">
             <div className="flex items-center gap-2">
               <CheckIcon />
-              <span>Atención inmediata</span>
+              <span>Atención rápida</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckIcon />
@@ -74,7 +75,7 @@ export default function Hero() {
             </div>
             <div className="flex items-center gap-2">
               <CheckIcon />
-              <span>Multi-marca</span>
+              <span>Cobertura CABA y GBA</span>
             </div>
           </div>
         </div>
