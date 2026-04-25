@@ -1,51 +1,42 @@
 /**
- * Landing Page Principal
- * Servicio Técnico de Calderas en CABA y GBA
- * Norte Clima - Nuevo branding
- * 
- * Estructura:
- * - Header: Logo + nombre + teléfono fijo
- * - Hero: Primera sección con CTAs
- * - Sobre Nosotros: Identidad del negocio
- * - BuscadorCiudad: Buscador de cobertura + costos
- * - Servicios: Cards de servicios ofrecidos
- * - Costos deVisita: Información detallada de costos + proceso
- * - Marcas: Disclaimer de independencia + repuestos
- * - Beneficios: Diferenciadores del servicio
- * - Testimonios: Reseñas de clientes
+ * Landing Page Principal - Optimizada para Conversión Google Ads
+ * Orden optimizado para maximizar conversiones:
+ * - Hero: Problema + Solución + CTA visible sin scroll
+ * - Problemas comunes: SEO + intención de búsqueda
+ * - Beneficios: Diferenciadores
+ * - Servicios: Lo que ofrecemos
+ * - Testimonios: Prueba social
+ * - Zonas: Cobertura sin fricción (search optional)
  * - FAQ: Preguntas frecuentes
- * - CTA: Llamada a la acción final
- * - Footer: Información de contacto
+ * - Sobre Nosotros: E-E-A-T
  */
 
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
-import SobreNosotros from '@/components/SobreNosotros';
-import BuscadorCiudad from '@/components/BuscadorCiudad';
-import Servicios from '@/components/Servicios';
-import CostosVisita from '@/components/CostosVisita';
-import Marcas from '@/components/Marcas';
+import ProblemasComunes from '@/components/ProblemasComunes';
 import Beneficios from '@/components/Beneficios';
+import Servicios from '@/components/Servicios';
 import Testimonios from '@/components/Testimonios';
+import Zonas from '@/components/Zonas';
 import FAQ from '@/components/FAQ';
-import CTA from '@/components/CTA';
+import SobreNosotros from '@/components/SobreNosotros';
 import Footer from '@/components/Footer';
+import WhatsAppFlotante from '@/components/WhatsAppFlotante';
 
 export default function Home() {
   return (
     <main>
       <Header />
       <Hero />
-      <SobreNosotros />
-      <BuscadorCiudad />
-      <Servicios />
-      <CostosVisita />
-      <Marcas />
+      <ProblemasComunes />
       <Beneficios />
+      <Servicios />
       <Testimonios />
+      <Zonas />
       <FAQ />
-      <CTA />
+      <SobreNosotros />
       <Footer />
+      <WhatsAppFlotante />
     </main>
   );
 }

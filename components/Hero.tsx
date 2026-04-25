@@ -1,6 +1,7 @@
 /**
- * Hero Section - Servicio técnico real en Zona Oeste
- * Copy localize y específico, no genérico
+ * Hero Section - Optimizado para Google Ads
+ * H1 orientado a urgencia y keyword de búsqueda
+ * CTA visible sin scroll
  */
 
 import WhatsAppButton from './WhatsAppButton';
@@ -8,7 +9,7 @@ import { config } from '@/lib/config';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-700 pt-16">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-700 pt-16">
       {/* Fondo */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtOS45NDEgMC0xOCA4LjA1OS0xOCAxOHM4LjA1OSAxOCAxOCAxOCAxOC04LjA1OSAxOC0xOC04LjA1OS0xOC0xOHptMCAzMmMtNy43MzIgMC0xNC02LjI2OC0xNC0xNHM2LjI2OC0xNCAxNC0xNCAxNCA2LjI2OCAxNCAxNC02LjI2OCAxNC0xNCAxNHoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAyIi8+PC9nPjwvc3ZnPg==')] opacity-30" />
       
@@ -21,31 +22,28 @@ export default function Hero() {
 
       <div className="relative z-10 container-main text-center px-4">
         <div className="animate-fade-in">
-          {/* Badge con zona específica */}
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm mb-6 border border-white/20">
+          {/* Badge con urgencia */}
+          <div className="inline-flex items-center gap-2 bg-green-500/20 backdrop-blur-sm text-green-300 px-4 py-2 rounded-full text-sm mb-6 border border-green-500/30">
             <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-            Técnicos en Zona Oeste • Atención a domicilio
+            Respondemos en minutos
           </div>
 
-          {/* Título específico */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 text-balance leading-tight">
-            <span className="text-primary-400">Norte Clima:</span>
-            {' '} Tu Servicio de confianza
+          {/* H1 ORIENTADO A GOOGLE ADS Y SEO */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 text-balance leading-tight">
+            Reparación de calderas
             <br />
-            en CABA y GBA
+            <span className="text-primary-400">en el día en CABA y GBA</span>
           </h1>
 
-          {/* Subtítulo directo */}
+          {/* Subtítulo con diferenciadores */}
           <p className="text-lg sm:text-xl text-neutral-300 mb-8 max-w-2xl mx-auto text-balance">
-            Reparación, mantenimiento e instalación en tu domicilio.
-            <br />
-            <span className="text-primary-300 font-medium">Atiende Marcelo, el técnico titular.</span>
+            Técnicos matriculados | Atención urgente 24hs | Todas las marcas
           </p>
 
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+          {/* CTAs - VISIBLES SIN SCROLL */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <WhatsAppButton size="lg">
-              Escribir por WhatsApp
+              Solicitar servicio ahora
             </WhatsAppButton>
             
             <a
@@ -57,24 +55,24 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Microcopy */}
-          <p className="text-neutral-400 text-sm mb-8">
-            Respondemos rápido • Coordinamos la visita • Sin compromiso
+          {/* Microcopy de urgencia */}
+          <p className="text-green-400 font-medium text-sm mb-8">
+            Sin cargo por visita • Sin compromiso • Orçamento claro
           </p>
 
           {/* Confianzones */}
           <div className="flex flex-wrap items-center justify-center gap-6 text-neutral-400 text-sm">
             <div className="flex items-center gap-2">
               <CheckIcon />
-              <span>+10 años en el rubro</span>
+              <span>+15 años en el rubro</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckIcon />
-              <span>Sin intermediarios</span>
+              <span>Técnico titular</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckIcon />
-              <span>Presupuesto claro</span>
+              <span>Todas las marcas</span>
             </div>
           </div>
         </div>
