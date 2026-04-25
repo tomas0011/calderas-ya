@@ -6,6 +6,7 @@
  * Estructura:
  * - Header: Logo + nombre + teléfono fijo
  * - Hero: Primera sección con CTAs
+ * - Sobre Nosotros: Identidad del negocio
  * - BuscadorCiudad: Buscador de cobertura + costos
  * - Servicios: Cards de servicios ofrecidos
  * - Costos deVisita: Información detallada de costos + proceso
@@ -19,6 +20,7 @@
 
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import SobreNosotros from '@/components/SobreNosotros';
 import BuscadorCiudad from '@/components/BuscadorCiudad';
 import Servicios from '@/components/Servicios';
 import CostosVisita from '@/components/CostosVisita';
@@ -34,6 +36,7 @@ export default function Home() {
     <main>
       <Header />
       <Hero />
+      <SobreNosotros />
       <BuscadorCiudad />
       <Servicios />
       <CostosVisita />

@@ -1,31 +1,30 @@
 /**
- * Sección de beneficios/ventajas competitivas
- * Resalta los diferenciadores del servicio
- * Sin frases genéricas tipo "líderes en el mercado"
+ * Beneficios reales - Diferenciadores concretos
+ * Sin lenguaje corporativo
  */
 
-import { CheckCircleIcon, MapPinIcon, ClockIcon, CurrencyIcon } from './Icons';
+import { MapPinIcon } from './Icons';
 
 const beneficios = [
   {
-    titulo: 'Atención rápida',
-    descripcion: 'Respondemos tu consulta en el menor tiempo posible y llegamos a tu domicilio rápido.',
-    icon: ClockIcon,
+    titulo: 'Vamos a tu casa',
+    descripcion: 'No necesitás acercar la caldera a ningún lado. Vamos a tu domicilio.',
+    icono: '🏠',
   },
   {
-    titulo: 'Servicio a domicilio',
-    descripcion: 'No necesitás trasladar tu caldera. Nuestro técnico va a tu casa.',
-    icon: MapPinIcon,
+    titulo: 'Sin llamar a un call center',
+    descripcion: 'Atiende nuestro asesor calificado directamente. Sin intermediarios.',
+    icono: '📞',
   },
   {
-    titulo: 'Técnicos con experiencia',
-    descripcion: 'Años de experiencia en reparación y mantenimiento de múltiples marcas.',
-    icon: CheckCircleIcon,
+    titulo: 'Presupuesto detallado',
+    descripcion: 'Te mostramos el costo antes de empezar. Sin costos ocultos.',
+    icono: '💰',
   },
   {
-    titulo: 'Presupuestos claros',
-    descripcion: 'Antes de trabajar, te damos un presupuesto detallado sin compromiso.',
-    icon: CurrencyIcon,
+    titulo: 'Reparamos en el lugar',
+    descripcion: 'En la mayoria de los casos, lo resolvemos en tu casa.',
+    icono: '🔧',
   },
 ];
 
@@ -36,10 +35,10 @@ export default function Beneficios() {
         {/* Encabezado */}
         <div className="text-center mb-16">
           <h2 className="section-title">
-            ¿Por qué elegirnos?
+            Por qué llamarnos
           </h2>
           <p className="section-subtitle">
-            Servicio técnico local con atención personalizada
+            Cosas concretas que nos diferencian
           </p>
         </div>
 
@@ -50,8 +49,8 @@ export default function Beneficios() {
               key={beneficio.titulo}
               className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
             >
-              <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                <beneficio.icon className="w-6 h-6 text-primary-600" />
+              <div className="text-3xl mb-3">
+                {beneficio.icono}
               </div>
               
               <h3 className="text-lg font-bold text-neutral-900 mb-2">
@@ -65,16 +64,16 @@ export default function Beneficios() {
           ))}
         </div>
 
-        {/* Cobertura destaque */}
+        {/* Cobertura */}
         <div className="mt-12 bg-primary-500 rounded-xl p-6 text-center">
           <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-8">
             <div className="flex items-center gap-2 text-white">
               <MapPinIcon className="w-6 h-6" />
-              <span className="font-semibold">Cobertura en CABA y GBA</span>
+              <span className="font-semibold">Atendemos en CABA y GBA</span>
             </div>
             <div className="hidden md:block w-px h-8 bg-white/30" />
             <p className="text-primary-100 text-sm">
-              Zona Norte • Zona Oeste • Zona Sur
+              Zona Sur según zona
             </p>
           </div>
         </div>

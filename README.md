@@ -1,6 +1,6 @@
-# Calderas YA Landing
+# Norte Clima Landing
 
-Landing page para **Calderas YA** — servicio técnico de calderas industriales en Buenos Aires.
+Landing page para **Norte Clima** — servicio técnico de calderas industriales en Buenos Aires.
 
 ## Stack Tecnológico
 
@@ -41,7 +41,7 @@ Todos los datos editables están centralizados en un solo archivo:
 ```ts
 export const config = {
   // Información de la empresa
-  companyName: "Calderas YA",
+  companyName: "Norte Clima",
   phone: "+5491158403106",
   phoneFormatted: "11 5840-3106",
   whatsapp: "5491158403106",

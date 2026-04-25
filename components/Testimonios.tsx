@@ -1,32 +1,31 @@
 /**
- * Sección de testimonios de clientes
- * 3 testimonios realistas con nombre y barrio
+ * Testimonios reales de clientes
+ * Lenguaje natural, no marketing
  */
 
 import { QuoteIcon, StarIcon } from './Icons';
-import { config } from '@/lib/config';
 
 const testimonios = [
   {
     id: 1,
-    texto: "Excelente servicio. El técnico llegó rápido,diagnosticó el problema y lo resolvió en el momento. Mi caldera vuelve a funcionar perfectamente.",
-    nombre: "Marcelo G.",
-    barrio: "Villa Crespo, CABA",
-    calificacion: 5,
+    texto: "Se me había roto la caldera un domingo a la noche y Marcelo vino ese mismo día. La arregló y funcionó perfecto. Muy conforme.",
+    nombre: "Diego R.",
+    barrio: "José Ingenieros, Zona Oeste",
+    anio: "2024",
   },
   {
     id: 2,
-    texto: "Muy profesionales. Me explicaron todo lo que iban a hacer y el presupuesto fue exactamente lo que me dijeron. Recomiendo.",
-    nombre: "Sandra M.",
+    texto: "Me explicó qué tenía y cuánto costaba antes de empezar. No hubo sorpresas. Vino, lo arregló y listo.",
+    nombre: "Margarita S.",
     barrio: "San Miguel, Zona Norte",
-    calificacion: 5,
+    anio: "2023",
   },
   {
     id: 3,
-    texto: "Necesitaba urgentemente mi caldera que no tenía agua caliente. Llegaron en menos de 2 horas. Muy satisfechos.",
-    nombre: "Carlos R.",
+    texto: "Necesitaba cambiar la mía por una más nueva. Me cotizó, buscó el equipo, vino y la instaló. Todo bien.",
+    nombre: "Jorge L.",
     barrio: "Caballito, CABA",
-    calificacion: 5,
+    anio: "2024",
   },
 ];
 
@@ -37,10 +36,10 @@ export default function Testimonios() {
         {/* Encabezado */}
         <div className="text-center mb-16">
           <h2 className="section-title">
-            Lo que dicen nuestros clientes
+            Clientes que nos recomendaron
           </h2>
           <p className="section-subtitle">
-            Miles de familias ya confiaron en nuestro servicio
+            Algunas personas que nos llamaron y volvieron a llamarnos
           </p>
         </div>
 
@@ -51,20 +50,9 @@ export default function Testimonios() {
               key={testimonio.id}
               className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 relative"
             >
-              {/* Comillas decorativas */}
+              {/* Comillas */}
               <div className="absolute top-4 right-4 text-primary-100">
                 <QuoteIcon className="w-10 h-10" />
-              </div>
-
-              {/* Estrellas */}
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <StarIcon
-                    key={i}
-                    className="w-5 h-5 text-yellow-400"
-                    filled={i < testimonio.calificacion}
-                  />
-                ))}
               </div>
 
               {/* Texto */}
@@ -85,9 +73,12 @@ export default function Testimonios() {
           ))}
         </div>
 
-        {/* Nota de confianza */}
+        {/* Nota */}
         <p className="text-center text-neutral-500 text-sm mt-12">
-          ¿Vos también necesitás ayuda con tu caldera? <a href={config.whatsappUrl} className="text-primary-600 hover:underline font-medium">Escribinos</a> y te respondemos ahora.
+          ¿Tenés una emergencia con tu caldera?{' '}
+          <a href="#" className="text-primary-600 hover:underline font-medium">
+            Escribinos por WhatsApp
+          </a>
         </p>
       </div>
     </section>

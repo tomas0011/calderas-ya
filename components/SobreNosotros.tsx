@@ -23,7 +23,7 @@ export default function SobreNosotros() {
             {/* Título */}
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
               Más de 10 años reparando calderas en{' '}
-              <span className="text-primary-600">Zona Oeste</span> y cercanías
+              <span className="text-primary-600">CABA y GBA</span>
             </h2>
 
             {/* Descripción */}
@@ -35,13 +35,12 @@ export default function SobreNosotros() {
               </p>
               <p>
                 No somos una empresa grande ni tenemos call center. Atienden directamente 
-                conmigo o con mi equipo, sin intermediarios. Eso nos permite ofrecer un 
+                con mi equipo o conmigo, sin intermediarios. Eso nos permite ofrecer un 
                 servicio más personalizado y presupuestos más claros.
               </p>
               <p>
-                Trabajamos en toda la Zona Oeste de GBA — La Matanza, Morón, Ituzaingó, 
-                Merlo, Hurlingham y localidades vecinas. También atendemos CABA según 
-                la zona.
+                Trabajamos en todo CABA y a donde lleguemos de GBA — La Matanza, Morón, Ituzaingó, 
+                Merlo, Hurlingham y localidades vecinas.
               </p>
             </div>
 

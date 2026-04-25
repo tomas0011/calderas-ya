@@ -1,36 +1,37 @@
 /**
- * Sección FAQ - Preguntas frecuentes
- * Resuelve objeciones comunes y mejora SEO
+ * FAQ - Preguntas que nos hacen todo el tiempo
+ * Respuestas cortas y claras
  */
 
 'use client';
 
 import { useState } from 'react';
+import WhatsAppButton from './WhatsAppButton';
 
 const faqs = [
   {
-    pregunta: '¿Atienden en el día si es urgente?',
-    respuesta: 'Sí, intentamos llegar lo antes posible. Si tenés una urgencia (sin agua caliente o sin calefacción), escribinos por WhatsApp y vemos cómo coordinarlo. No podemos garantizar llegada en el mismo día para todas las zonas, pero hacemos nuestro mejor esfuerzo.',
+    pregunta: '¿Pueden venir hoy?',
+    respuesta: 'Si es urgente, intentamos en el día. Escribinos por WhatsApp y vemos cómo coordinarlo.',
   },
   {
-    pregunta: '¿Qué zonas cubren?',
-    respuesta: 'Trabajamos principalmente en Zona Oeste (La Matanza, Morón, Ituzaingó, Merlo, Hurlingham) y también en CABA según la zona. Si estás en otra zona, consultanos que vemos si llegamos.',
+    pregunta: '¿Atienden en mi zona?',
+    respuesta: 'Estamos en Zona Oeste (La Matanza, Morón, Ituzaingó, Merlo, Hurlingham). También CABA según la zona. Consultanos.',
   },
   {
-    pregunta: '¿Reparan todas las marcas?',
-    respuesta: 'Trabajamos con las marcas más comunes del mercado: Baxi, Peisa, Ariston, Orbis, Euterma, VAILLANT, Junkers, y otras. Si tenés una marca diferente, consultanos.',
+    pregunta: '¿Qué marcas reparan?',
+    respuesta: 'Baxi, Peisa, Ariston, Orbis, Euterma, VAILLANT, Junkers y otras. Si tenés otra, consultanos.',
   },
   {
-    pregunta: '¿Dan presupuesto sin compromiso?',
-    respuesta: 'Sí, el diagnóstico tiene costo pero te lo detallamos antes de empezar cualquier reparación. El presupuesto que te damos es el que pagás — no hay costos ocultos.',
+    pregunta: '¿Cuánto cobra el diagnóstico?',
+    respuesta: 'El diagnóstico tiene costo, pero te lo detallamos antes de arrancar. Si aprobás el presupuesto, se descuenta del total.',
   },
   {
-    pregunta: '¿Necesito llevar la caldera a algún lugar?',
-    respuesta: 'No, vamos a tu domicilio. No necesitás trasladar la caldera a ningún lado. Si hay que cambiar algún repuesto que no llevamos, coordinamos para volver más tarde.',
+    pregunta: '¿Necesito mover la caldera?',
+    respuesta: 'No. Vamos a tu casa y revisamos todo ahí. No tenés que acercar nada.',
   },
   {
-    pregunta: '¿Cómo solicito un turno?',
-    respuesta: 'La forma más fácil es por WhatsApp. Nos escribís, nos contás qué le pasa a tu caldera, y coordinamos el turno. También podés llamarnos si preferís.',
+    pregunta: '¿Cómo coordinarte?',
+    respuesta: 'Escribinos por WhatsApp o llamanos. Nos decís qué le pasa a la caldera y acordamos el turno.',
   },
 ];
 
@@ -46,7 +47,7 @@ export default function FAQ() {
             Preguntas frecuentes
           </h2>
           <p className="section-subtitle">
-            Resolvemos tus dudas antes de que contactes
+            Lo que nos preguntan siempre
           </p>
         </div>
 
@@ -57,7 +58,7 @@ export default function FAQ() {
               key={index}
               className="border border-neutral-200 rounded-lg overflow-hidden"
             >
-              {/* Pregunta (clickeable) */}
+              {/* Pregunta */}
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full flex items-center justify-between p-5 text-left bg-neutral-50 hover:bg-neutral-100 transition-colors duration-200"
@@ -77,7 +78,7 @@ export default function FAQ() {
                 </svg>
               </button>
 
-              {/* Respuesta (expandible) */}
+              {/* Respuesta */}
               <div
                 className={`overflow-hidden transition-all duration-200 ${
                   openIndex === index ? 'max-h-96' : 'max-h-0'
@@ -91,13 +92,15 @@ export default function FAQ() {
           ))}
         </div>
 
-        {/* CTA adicional */}
-        <p className="text-center text-neutral-500 mt-10">
-          ¿Tenés otra pregunta?{' '}
-          <a href="#" className="text-primary-600 hover:underline font-medium">
-            Escribinos por WhatsApp
-          </a>
-        </p>
+        {/* CTA */}
+        <div className="text-center mt-10">
+          <p className="text-neutral-500 mb-4">
+            ¿Tenés otra pregunta?
+          </p>
+          <WhatsAppButton size="sm">
+            Escribir por WhatsApp
+          </WhatsAppButton>
+        </div>
       </div>
     </section>
   );
