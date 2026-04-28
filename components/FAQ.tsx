@@ -3,35 +3,43 @@
  * Respuestas cortas y claras
  */
 
-'use client';
+"use client";
 
-import { useState } from 'react';
-import WhatsAppButton from './WhatsAppButton';
+import { useState } from "react";
+import WhatsAppButton from "./WhatsAppButton";
 
 const faqs = [
   {
-    pregunta: '¿Pueden venir hoy?',
-    respuesta: 'Si es urgente, intentamos en el día. Escribinos por WhatsApp y vemos cómo coordinarlo.',
+    pregunta: "¿Pueden venir hoy?",
+    respuesta:
+      "Si es urgente, intentamos en el día. Escribinos por WhatsApp y vemos cómo coordinarlo.",
   },
   {
-    pregunta: '¿Atienden en mi zona?',
-    respuesta: 'Estamos en Zona Oeste (La Matanza, Morón, Ituzaingó, Merlo, Hurlingham). También CABA según la zona. Consultanos.',
+    pregunta: "¿Atienden en mi zona?",
+    // respuesta: 'Atendemos en Zona Oeste, Zona Norte y Zona Sur. También CABA según la zona. Consultanos.',
+    respuesta: (
+      <span>
+        Atendemos en <b>Zona Oeste</b>, <b>Zona Norte</b> y <b>Zona Sur</b>.
+        También <b>CABA</b> según la zona. Consultanos.
+      </span>
+    ),
   },
   {
-    pregunta: '¿Qué marcas reparan?',
-    respuesta: 'Baxi, Peisa, Ariston, Orbis, Euterma, VAILLANT, Junkers y otras. Si tenés otra, consultanos.',
+    pregunta: "¿Qué marcas reparan?",
+    respuesta: "Baxi, Peisa, Ariston y otras. Si tenés otras, consultanos.",
   },
   {
-    pregunta: '¿Cuánto cobra el diagnóstico?',
-    respuesta: 'El diagnóstico tiene costo, pero te lo detallamos antes de arrancar. Si aprobás el presupuesto, se descuenta del total.',
+    pregunta: "¿Cuánto cobra el diagnóstico?",
+    respuesta: "Si aprobas el presupuesto, el diagnostico no tiene costo.",
   },
   {
-    pregunta: '¿Necesito mover la caldera?',
-    respuesta: 'No. Vamos a tu casa y revisamos todo ahí. No tenés que acercar nada.',
+    pregunta: "¿Necesito mover la caldera?",
+    respuesta: "No. Vamos a tu casa y revisamos todo en tu domicilio.",
   },
   {
-    pregunta: '¿Cómo coordinarte?',
-    respuesta: 'Escribinos por WhatsApp o llamanos. Nos decís qué le pasa a la caldera y acordamos el turno.',
+    pregunta: "¿Cómo coordinarte?",
+    respuesta:
+      "Escribinos por WhatsApp o llamanos. Nos decís qué le pasa a la caldera y acordamos el turno.",
   },
 ];
 
@@ -43,12 +51,8 @@ export default function FAQ() {
       <div className="container-main">
         {/* Encabezado */}
         <div className="text-center mb-16">
-          <h2 className="section-title">
-            Preguntas frecuentes
-          </h2>
-          <p className="section-subtitle">
-            Lo que nos preguntan siempre
-          </p>
+          <h2 className="section-title">Preguntas frecuentes</h2>
+          <p className="section-subtitle">Lo que nos preguntan siempre</p>
         </div>
 
         {/* Lista de FAQs */}
@@ -68,20 +72,25 @@ export default function FAQ() {
                 </span>
                 <svg
                   className={`w-5 h-5 text-neutral-500 flex-shrink-0 transition-transform duration-200 ${
-                    openIndex === index ? 'rotate-180' : ''
+                    openIndex === index ? "rotate-180" : ""
                   }`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
 
               {/* Respuesta */}
               <div
                 className={`overflow-hidden transition-all duration-200 ${
-                  openIndex === index ? 'max-h-96' : 'max-h-0'
+                  openIndex === index ? "max-h-96" : "max-h-0"
                 }`}
               >
                 <p className="p-5 text-neutral-600 leading-relaxed border-t border-neutral-200">
@@ -94,12 +103,8 @@ export default function FAQ() {
 
         {/* CTA */}
         <div className="text-center mt-10">
-          <p className="text-neutral-500 mb-4">
-            ¿Tenés otra pregunta?
-          </p>
-          <WhatsAppButton size="sm">
-            Escribir por WhatsApp
-          </WhatsAppButton>
+          <p className="text-neutral-500 mb-4">¿Tenés otra pregunta?</p>
+          <WhatsAppButton size="sm">Escribir por WhatsApp</WhatsAppButton>
         </div>
       </div>
     </section>

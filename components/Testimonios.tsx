@@ -3,7 +3,7 @@
  * Lenguaje natural, no marketing
  */
 
-import { QuoteIcon, StarIcon } from './Icons';
+import { QuoteIcon } from './Icons';
 
 const testimonios = [
   {

@@ -10,7 +10,7 @@ const servicios = [
   {
     id: 'reparacion',
     titulo: 'Reparación',
-    descripcion: 'Fallas de ignición, presión, agua caliente o calefacción. Revisamos y arreglamos en tu domicilio.',
+    descripcion: 'Fallas de presión, agua caliente o calefacción. Revisamos y arreglamos en tu domicilio.',
     Icon: WrenchIcon,
   },
   {
@@ -28,7 +28,7 @@ const servicios = [
   {
     id: 'diagnostico',
     titulo: 'Diagnóstico',
-    descripcion: 'Revisión completa con presupuesto detallado. Sin compromiso, pagás solo si aprobás.',
+    descripcion: 'Revisión completa con presupuesto detallado.',
     Icon: MagnifierIcon,
   },
 ];
@@ -58,13 +58,13 @@ export default function Servicios() {
               <div className="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary-500 transition-colors duration-300">
                 <servicio.Icon className="w-7 h-7 text-primary-600 group-hover:text-white transition-colors duration-300" />
               </div>
-              
+
               <h3 className="text-xl font-bold text-neutral-900 mb-3">
                 {servicio.titulo}
               </h3>
-              
+
               <p className="text-neutral-600 text-sm leading-relaxed"
-                 dangerouslySetInnerHTML={{ __html: servicio.descripcion }}
+                dangerouslySetInnerHTML={{ __html: servicio.descripcion }}
               />
             </div>
           ))}

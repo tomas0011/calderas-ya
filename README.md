@@ -43,14 +43,14 @@ export const config = {
   // Información de la empresa
   companyName: "Norte Clima",
   phone: "+5491158403106",
-  phoneFormatted: "11 5840-3106",
+  phoneFormatted: "11 6912-7078",
   whatsapp: "5491158403106",
   whatsappMessage: "Hola, necesito información sobre calderas",
   email: "yacalderas@gmail.com",
 
   // Horario de atención
-  schedule: "Lunes a Sábado de 8:00 a 20:00",
-  scheduleShort: "Lun-Sáb 8:00-20:00",
+  schedule: "Lunes a Viernes de 8:00 a 19:00, Sabado de 8:00 a 14:00",
+  scheduleShort: "Lun-Vie 8:00-19:00, Sab 8:00-14:00",
 
   // Cobertura geográfica
   coverage: ["CABA", "Zona Norte", "Zona Oeste", "Zona Sur"] as const,
@@ -60,16 +60,16 @@ export const config = {
 
   // Descargo legal
   disclaimer: "Somos un servicio técnico independiente...",
-}
+};
 ```
 
 ### URLs generadas automáticamente
 
-| Campo | Uso |
-|-------|-----|
+| Campo                | Uso                     |
+| -------------------- | ----------------------- |
 | `config.whatsappUrl` | Link directo a WhatsApp |
-| `config.phoneUrl` | Link `tel:` |
-| `config.emailUrl` | Link `mailto:` |
+| `config.phoneUrl`    | Link `tel:`             |
+| `config.emailUrl`    | Link `mailto:`          |
 
 ### Cómo usar en componentes
 
@@ -132,7 +132,7 @@ export default function NuevaSeccion() {
 
 ```tsx
 // app/page.tsx
-import NuevaSeccion from '@/components/NuevaSeccion';
+import NuevaSeccion from "@/components/NuevaSeccion";
 
 export default function Home() {
   return (
@@ -163,12 +163,12 @@ Crear archivo en `app/nueva-pagina/page.tsx`.
 
 ## Scripts Disponibles
 
-| Script | Descripción |
-|--------|-------------|
-| `npm run dev` | Dev server con hot-reload |
-| `npm run build` | Build de producción |
+| Script          | Descripción                |
+| --------------- | -------------------------- |
+| `npm run dev`   | Dev server con hot-reload  |
+| `npm run build` | Build de producción        |
 | `npm run start` | Servir build de producción |
-| `npm run lint` | Verificar código |
+| `npm run lint`  | Verificar código           |
 
 ---
 
