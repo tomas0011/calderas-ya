@@ -10,22 +10,10 @@ import WhatsAppButton from './WhatsAppButton';
 import costRulesData from '@/shared/cost-rules.json';
 
 const zonas = [
-  {
-    nombre: 'CABA',
-    incluidos: 'Capital Federal, Recoleta, Palermo, Belgrano, Núñez, Caballito, Flores, Villa Lugano, todos los barrios',
-  },
-  {
-    nombre: 'Zona Norte',
-    incluidos: 'San Isidro, Vicente López, Tigre, San Martín, Pilar, Nordelta, Martínez',
-  },
-  {
-    nombre: 'Zona Oeste',
-    incluidos: 'Morón, Ituzaingó, Hurlingham, Merlo, La Matanza, Ramos Mejía, Villa Sarmiento',
-  },
-  {
-    nombre: 'Zona Sur',
-    incluidos: 'Lomas de Zamora, Banfield, Lanús, Avellaneda, Quilmes, Berazategui',
-  },
+  { nombre: 'CABA', icono: '🏙️' },
+  { nombre: 'Zona Norte', icono: '🧭' },
+  { nombre: 'Zona Oeste', icono: '🌅' },
+  { nombre: 'Zona Sur', icono: '🌴' },
 ];
 
 function formatCurrency(value: number): string {
@@ -47,7 +35,7 @@ export default function Zonas() {
   const filteredCities = useMemo(() => {
     if (!search.trim()) return cities.slice(0, 6);
     const query = search.toLowerCase();
-    return cities.filter(city => 
+    return cities.filter(city =>
       city.toLowerCase().includes(query)
     ).slice(0, 6);
   }, [search]);
@@ -74,18 +62,16 @@ export default function Zonas() {
         </div>
 
         {/* Grid de zonas */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           {zonas.map((zona) => (
             <div
               key={zona.nombre}
-              className="bg-neutral-50 rounded-xl p-5 border border-neutral-200"
+              className="bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-default"
             >
-              <h3 className="font-bold text-primary-600 text-lg mb-2">
+              <div className="text-4xl mb-2">{zona.icono}</div>
+              <span className="text-white font-bold text-lg">
                 {zona.nombre}
-              </h3>
-              <p className="text-neutral-600 text-sm">
-                {zona.incluidos}
-              </p>
+              </span>
             </div>
           ))}
         </div>
@@ -96,7 +82,7 @@ export default function Zonas() {
             <h3 className="text-lg font-bold text-neutral-900 mb-4 text-center">
               Consultá el costo de visita en tu zona
             </h3>
-            
+
             {/* Input de búsqueda */}
             <div className="relative">
               <input
@@ -110,7 +96,7 @@ export default function Zonas() {
                 placeholder="Escribí tu barrio o ciudad..."
                 className="w-full px-4 py-3 text-base bg-white border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               />
-              
+
               {/* Dropdown de resultados */}
               {search && filteredCities.length > 0 && !selectedCity && (
                 <div className="absolute z-10 w-full mt-1 bg-white border border-neutral-200 rounded-lg shadow-lg max-h-48 overflow-y-auto">
