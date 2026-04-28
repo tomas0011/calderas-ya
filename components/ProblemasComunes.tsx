@@ -12,16 +12,16 @@ const problemas = [
     keywords: 'caldera no enciende, no prende caldera',
   },
   {
-    titulo: 'Sin agua caliente',
+    titulo: 'Sale agua fria - Agua intermitente',
     descripcion: 'El agua sale fría o no sale del termo.',
     keywords: 'agua caliente no sale, caldera no calienta agua',
   },
   {
-    titulo: 'La caldera se apaga sola',
-    keywords: 'caldera se apaga, corte de暖气',
+    titulo: 'La caldera se enciende sola',
+    keywords: 'caldera se enciende, corte de暖气',
   },
   {
-    titulo: 'Fuga de agua o gas',
+    titulo: 'Perdida de agua o gas',
     keywords: 'fuga agua caldera, olor a gas',
   },
   {
