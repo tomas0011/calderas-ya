@@ -38,7 +38,7 @@ export default function Beneficios() {
             Por qué llamarnos
           </h2>
           <p className="section-subtitle">
-            Cosas concretas que nos diferencian
+            Porque somos un servicio técnico especializado en la reparación de calderas, proporcionando garantía exclusiva por todos nuestros trabajos.
           </p>
         </div>
 
@@ -52,11 +52,11 @@ export default function Beneficios() {
               <div className="text-3xl mb-3">
                 {beneficio.icono}
               </div>
-              
+
               <h3 className="text-lg font-bold text-neutral-900 mb-2">
                 {beneficio.titulo}
               </h3>
-              
+
               <p className="text-neutral-600 text-sm leading-relaxed">
                 {beneficio.descripcion}
               </p>
