@@ -76,66 +76,6 @@ export default function Zonas() {
           ))}
         </div>
 
-        {/* Buscador de costo de visita */}
-        <div className="max-w-md mx-auto">
-          <div className="bg-neutral-50 rounded-xl p-6 border border-neutral-200">
-            <h3 className="text-lg font-bold text-neutral-900 mb-4 text-center">
-              Consultá el costo de visita en tu zona
-            </h3>
-
-            {/* Input de búsqueda */}
-            <div className="relative">
-              <input
-                type="text"
-                value={search}
-                onChange={(e) => {
-                  setSearch(e.target.value);
-                  setSelectedCity(null);
-                }}
-                onFocus={() => setSelectedCity(null)}
-                placeholder="Escribí tu barrio o ciudad..."
-                className="w-full px-4 py-3 text-base bg-white border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-              />
-
-              {/* Dropdown de resultados */}
-              {search && filteredCities.length > 0 && !selectedCity && (
-                <div className="absolute z-10 w-full mt-1 bg-white border border-neutral-200 rounded-lg shadow-lg max-h-48 overflow-y-auto">
-                  {filteredCities.map((city) => (
-                    <button
-                      key={city}
-                      onClick={() => handleCitySelect(city)}
-                      className="w-full px-4 py-3 text-left hover:bg-primary-50 transition-colors"
-                    >
-                      <span className="text-neutral-800">{city}</span>
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Resultado */}
-            {selectedCity && hasCoverage && (
-              <div className="mt-4 bg-green-50 rounded-lg p-4 border border-green-200">
-                <div className="flex items-center gap-2 mb-2">
-                  <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="font-semibold text-green-800">Cobertura en {selectedCity}</span>
-                </div>
-                <p className="text-2xl font-bold text-green-700">
-                  {formatCurrency(costo)}
-                  <span className="text-sm font-normal text-green-600 ml-2">costo de visita</span>
-                </p>
-              </div>
-            )}
-
-            {/* Disclaimer de variación */}
-            <p className="text-center text-neutral-500 text-xs mt-4">
-              * El costo puede variar según distancia, disponibilidad del técnico, costo de combustible y otros factores operativos. El presupuesto final se define en la visita.
-            </p>
-          </div>
-        </div>
-
         {/* Nota de cobertura extendida */}
         <div className="mt-8 bg-primary-50 rounded-xl p-5 text-center">
           <p className="text-primary-700">
