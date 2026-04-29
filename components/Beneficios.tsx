@@ -32,7 +32,7 @@ const beneficios = [
 
 export default function Beneficios() {
   return (
-    <section id="beneficios" className="py-20 bg-neutral-100">
+    <section id="beneficios" className="py-20">
       <div className="container-main">
         {/* Encabezado */}
         <div className="text-center mb-16">
@@ -65,7 +65,7 @@ export default function Beneficios() {
         </div>
 
         {/* Cobertura */}
-        <div className="mt-12 bg-neutral-50 border border-neutral-200 rounded-xl p-6">
+        <div className="mt-12 bg-neutral-50 shadow-sm rounded-xl p-6">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
             <div className="flex items-center gap-2 text-neutral-700">
               <MapPinIcon className="w-5 h-5 text-primary-500" />

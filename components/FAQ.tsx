@@ -48,7 +48,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-20 bg-white">
+    <section id="faq" className="py-20">
       <div className="container-main">
         {/* Encabezado */}
         <div className="text-center mb-16">
@@ -72,9 +72,8 @@ export default function FAQ() {
                   {faq.pregunta}
                 </span>
                 <svg
-                  className={`w-5 h-5 text-neutral-500 flex-shrink-0 transition-transform duration-200 ${
-                    openIndex === index ? "rotate-180" : ""
-                  }`}
+                  className={`w-5 h-5 text-neutral-500 flex-shrink-0 transition-transform duration-200 ${openIndex === index ? "rotate-180" : ""
+                    }`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -90,9 +89,8 @@ export default function FAQ() {
 
               {/* Respuesta */}
               <div
-                className={`overflow-hidden transition-all duration-200 ${
-                  openIndex === index ? "max-h-96" : "max-h-0"
-                }`}
+                className={`overflow-hidden transition-all duration-200 ${openIndex === index ? "max-h-96" : "max-h-0"
+                  }`}
               >
                 <p className="p-5 text-neutral-600 leading-relaxed border-t border-neutral-200">
                   {faq.respuesta}

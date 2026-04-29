@@ -46,9 +46,15 @@ function ProblemaCard({ titulo }: { titulo: string }) {
 
 export default function ProblemasComunes() {
   return (
-    <section id="problemas" className="py-16 bg-neutral-50">
+    <section id="problemas" className="py-16">
       <div className="container-main">
         {/* Encabezado */}
+        <div className="text-center mb-16">
+          <h2 className="section-title">¿Tu caldera tiene algún problema?</h2>
+          <p className="section-subtitle">
+            Estos son los problemas más comunes que solucionamos a diario
+          </p>
+        </div>
 
         {/* Layout mitad y mitad */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

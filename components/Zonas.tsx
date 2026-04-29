@@ -51,7 +51,7 @@ export default function Zonas() {
   const hasCoverage = selectedCity && costo > 0;
 
   return (
-    <section id="zonas" className="py-16 bg-white">
+    <section id="zonas" className="py-16">
       <div className="container-main">
         {/* Encabezado */}
         <div className="text-center mb-10">

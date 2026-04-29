@@ -9,7 +9,7 @@ import { config } from "@/lib/config";
 
 export default function SobreNosotros() {
   return (
-    <section id="nosotros" className="py-20 bg-white">
+    <section id="nosotros" className="py-20 bg-white/30">
       <div className="container-main">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Columna izquierda: contenido */}
