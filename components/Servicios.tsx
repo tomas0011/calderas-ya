@@ -35,7 +35,7 @@ const servicios = [
 
 export default function Servicios() {
   return (
-    <section id="servicios" className="py-20 bg-neutral-50">
+    <section id="servicios" className="py-20">
       <div className="container-main">
         {/* Encabezado */}
         <div className="text-center mb-16">

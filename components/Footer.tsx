@@ -16,7 +16,7 @@ export default function Footer() {
           {/* Columna 1: Contacto */}
           <div>
             <h3 className="text-white font-bold text-lg mb-4">Contacto</h3>
-            
+
             <div className="space-y-3">
               <a
                 href={config.phoneUrl}
@@ -25,7 +25,7 @@ export default function Footer() {
                 <PhoneIcon className="w-5 h-5 flex-shrink-0" />
                 <span>{config.phoneFormatted}</span>
               </a>
-              
+
               <a
                 href={config.whatsappUrl}
                 target="_blank"
@@ -41,7 +41,7 @@ export default function Footer() {
           {/* Columna 2: Horario */}
           <div>
             <h3 className="text-white font-bold text-lg mb-4">Horario</h3>
-            
+
             <div className="flex items-start gap-3">
               <ClockIcon className="w-5 h-5 flex-shrink-0 mt-0.5" />
               <div>
@@ -56,7 +56,7 @@ export default function Footer() {
           {/* Columna 3: Cobertura */}
           <div>
             <h3 className="text-white font-bold text-lg mb-4">Zonas de Atención</h3>
-            
+
             <div className="flex items-start gap-3">
               <MapPinIcon className="w-5 h-5 flex-shrink-0 mt-0.5" />
               <div>
@@ -83,9 +83,13 @@ export default function Footer() {
             <p className="text-sm text-neutral-500">
               © {currentYear} {config.companyName}. Todos los derechos reservados.
             </p>
-            
+
             <p className="text-xs text-neutral-600 text-center md:text-right">
               Este sitio web es informativo y no representa servicio oficial de ninguna marca.
+            </p>
+
+            <p className="text-xs text-neutral-600 text-center md:text-left">
+              No somos servicio técnico oficial de Baxi ni Caldaia. Trabajamos de forma independiente, especializados en estas marcas.
             </p>
           </div>
         </div>
