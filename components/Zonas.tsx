@@ -53,6 +53,16 @@ export default function Zonas() {
   return (
     <section id="zonas" className="py-16 bg-white">
       <div className="container-main">
+        {/* Encabezado */}
+        <div className="text-center mb-10">
+          <h2 className="text-3xl font-bold text-neutral-900 mb-2">
+            Zonas de Cobertura
+          </h2>
+          <p className="text-neutral-600">
+            Llegamos a toda CABA y GBA
+          </p>
+        </div>
+
         {/* Pills de zonas */}
         <div className="flex flex-wrap justify-center gap-3 mb-8">
           {zonas.map((zona) => (
