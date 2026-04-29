@@ -11,7 +11,7 @@ const problemas = [
     titulo: 'La caldera no enciende',
   },
   {
-    titulo: 'Sale agua fria - Agua intermitente',
+    titulo: 'Sale agua fria o agua intermitente',
   },
   {
     titulo: 'La caldera se enciende sola',
