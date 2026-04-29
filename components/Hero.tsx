@@ -37,7 +37,7 @@ export default function Hero() {
 
           {/* Subtítulo con diferenciadores */}
           <p className="text-lg sm:text-xl text-neutral-300 mb-8 max-w-2xl mx-auto text-balance">
-            Técnicos matriculados | Atención urgente 24hs | Todas las marcas
+            Técnicos capacitados | Atención urgente 24hs | Todas las marcas
           </p>
 
           {/* CTAs - VISIBLES SIN SCROLL */}
