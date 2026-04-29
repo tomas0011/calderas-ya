@@ -25,7 +25,7 @@ const beneficios = [
   },
   {
     titulo: "Reparamos en el lugar",
-    descripcion: "En la mayoria de los casos, lo resolvemos en tu casa.",
+    descripcion: "En la mayoría de los casos, lo resolvemos en tu casa.",
     icono: "🔧",
   },
 ];
