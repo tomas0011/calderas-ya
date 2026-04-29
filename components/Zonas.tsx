@@ -53,20 +53,23 @@ export default function Zonas() {
   return (
     <section id="zonas" className="py-16 bg-white">
       <div className="container-main">
-        {/* Grid de zonas */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+        {/* Pills de zonas */}
+        <div className="flex flex-wrap justify-center gap-3 mb-8">
           {zonas.map((zona) => (
-            <div
+            <span
               key={zona.nombre}
-              className="bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-default"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-100 text-neutral-700 rounded-full text-sm font-medium hover:bg-neutral-200 transition-colors cursor-default"
             >
-              <div className="text-4xl mb-2">{zona.icono}</div>
-              <span className="text-white font-bold text-lg">
-                {zona.nombre}
-              </span>
-            </div>
+              <span>{zona.icono}</span>
+              {zona.nombre}
+            </span>
           ))}
         </div>
+
+        {/* Disclaimer */}
+        <p className="text-center text-neutral-500 text-sm mb-8">
+          * El costo de visita puede variar según la zona y disponibilidad
+        </p>
 
         {/* Nota de cobertura extendida */}
         <div className="mt-8 bg-primary-50 rounded-xl p-5 text-center">
