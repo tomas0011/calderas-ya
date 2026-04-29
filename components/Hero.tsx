@@ -70,7 +70,17 @@ export default function Hero() {
             </div>
             <div className="flex items-center gap-2">
               <CheckIcon />
-              <span>Todas las marcas</span>
+              <span>Mayoría de marcas</span>
+            </div>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-6 text-neutral-400 text-sm mt-2">
+            <div className="flex items-center gap-2">
+              <CheckIcon />
+              <span>Garantía propia</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckIcon />
+              <span>Servicio garantizado</span>
             </div>
           </div>
         </div>
