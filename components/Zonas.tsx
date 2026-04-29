@@ -3,29 +3,29 @@
  * Muestra cobertura en texto + permite consultar costo de visita
  */
 
-'use client';
+"use client";
 
-import { useState, useMemo } from 'react';
-import WhatsAppButton from './WhatsAppButton';
-import costRulesData from '@/shared/cost-rules.json';
+import { useState, useMemo } from "react";
+import WhatsAppButton from "./WhatsAppButton";
+import costRulesData from "@/shared/cost-rules.json";
 
 const zonas = [
-  { nombre: 'CABA', icono: '🏙️' },
-  { nombre: 'Zona Norte', icono: '🧭' },
-  { nombre: 'Zona Oeste', icono: '🌅' },
-  { nombre: 'Zona Sur', icono: '🌴' },
+  { nombre: "CABA", icono: "🏙️" },
+  { nombre: "Zona Norte", icono: "🧭" },
+  { nombre: "Zona Oeste", icono: "🌅" },
+  { nombre: "Zona Sur", icono: "🌴" },
 ];
 
 function formatCurrency(value: number): string {
-  return new Intl.NumberFormat('es-AR', {
-    style: 'currency',
-    currency: 'ARS',
+  return new Intl.NumberFormat("es-AR", {
+    style: "currency",
+    currency: "ARS",
     maximumFractionDigits: 0,
   }).format(value);
 }
 
 export default function Zonas() {
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
   const [selectedCity, setSelectedCity] = useState<string | null>(null);
 
   // Ciudades disponibles del JSON
@@ -35,9 +35,9 @@ export default function Zonas() {
   const filteredCities = useMemo(() => {
     if (!search.trim()) return cities.slice(0, 6);
     const query = search.toLowerCase();
-    return cities.filter(city =>
-      city.toLowerCase().includes(query)
-    ).slice(0, 6);
+    return cities
+      .filter((city) => city.toLowerCase().includes(query))
+      .slice(0, 6);
   }, [search]);
 
   const handleCitySelect = (city: string) => {
@@ -45,41 +45,47 @@ export default function Zonas() {
     setSelectedCity(city);
   };
 
-  const costo = selectedCity ? costRulesData[selectedCity as keyof typeof costRulesData] : 0;
+  const costo = selectedCity
+    ? costRulesData[selectedCity as keyof typeof costRulesData]
+    : 0;
   const hasCoverage = selectedCity && costo > 0;
 
   return (
-    <section id="zonas" className="py-16 bg-white">
+    <section id="zonas" className="py-16">
       <div className="container-main">
         {/* Encabezado */}
         <div className="text-center mb-10">
-          <h2 className="section-title">
+          <h2 className="text-3xl font-bold text-neutral-900 mb-2">
             Zonas de Cobertura
           </h2>
-          <p className="section-subtitle">
-            Llegamos a toda CABA y GBA — Visitamos tu domicilio sin cargo
+          <p className="text-neutral-600">
+            Llegamos a toda CABA y GBA
           </p>
         </div>
 
-        {/* Grid de zonas */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+        {/* Pills de zonas */}
+        <div className="flex flex-wrap justify-center gap-3 mb-8">
           {zonas.map((zona) => (
-            <div
+            <span
               key={zona.nombre}
-              className="bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-default"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-100 text-neutral-700 rounded-full text-sm font-medium hover:bg-neutral-200 transition-colors cursor-default"
             >
-              <div className="text-4xl mb-2">{zona.icono}</div>
-              <span className="text-white font-bold text-lg">
-                {zona.nombre}
-              </span>
-            </div>
+              <span>{zona.icono}</span>
+              {zona.nombre}
+            </span>
           ))}
         </div>
+
+        {/* Disclaimer */}
+        <p className="text-center text-neutral-500 text-sm mb-8">
+          * El costo de visita puede variar según la zona y disponibilidad
+        </p>
 
         {/* Nota de cobertura extendida */}
         <div className="mt-8 bg-primary-50 rounded-xl p-5 text-center">
           <p className="text-primary-700">
-            <span className="font-semibold">¿Tu zona no está en la lista?</span> Consultanos — llegamos a más localidades.
+            <span className="font-semibold">¿Tu zona no está en la lista?</span>{" "}
+            Consultanos — llegamos a más localidades.
           </p>
         </div>
 

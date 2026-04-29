@@ -31,7 +31,7 @@ const testimonios = [
 
 export default function Testimonios() {
   return (
-    <section id="testimonios" className="py-20 bg-neutral-50">
+    <section id="testimonios" className="py-20 bg-white/80">
       <div className="container-main">
         {/* Encabezado */}
         <div className="text-center mb-16">

@@ -9,17 +9,8 @@ import { config } from "@/lib/config";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-700 pt-16">
-      {/* Fondo */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtOS45NDEgMC0xOCA4LjA1OS0xOCAxOHM4LjA1OSAxOCAxOCAxOCAxOC04LjA1OSAxOC0xOC04LjA1OS0xOC0xOHptMCAzMmMtNy43MzIgMC0xNC02LjI2OC0xNC0xNHM2LjI2OC0xNCAxNC0xNCAxNCA2LjI2OCAxNCAxNC02LjI2OCAxNC0xNCAxNHoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAyIi8+PC9nPjwvc3ZnPg==')] opacity-30" />
-
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/80 via-neutral-900/40 to-transparent" />
-
-      {/* Elementos decorativos */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-primary-500/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-10 w-48 h-48 bg-orange-500/10 rounded-full blur-3xl" />
-
+    // <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-700 pt-16">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-16 backdrop-invert-[0.85]">
       <div className="relative z-10 container-main text-center px-4">
         <div className="animate-fade-in">
           {/* Badge con urgencia */}
@@ -37,7 +28,7 @@ export default function Hero() {
 
           {/* Subtítulo con diferenciadores */}
           <p className="text-lg sm:text-xl text-neutral-300 mb-8 max-w-2xl mx-auto text-balance">
-            Técnicos matriculados | Atención urgente 24hs | Todas las marcas
+            Técnicos calificados | Atención urgente | Servicio multimarca
           </p>
 
           {/* CTAs - VISIBLES SIN SCROLL */}
@@ -55,7 +46,7 @@ export default function Hero() {
 
           {/* Microcopy de urgencia */}
           <p className="text-green-400 font-medium text-sm mb-8">
-            Sin cargo por visita • Sin compromiso • Orçamento claro
+            Diagnóstico sin cargo • Reparación en el día • Presupuesto claro
           </p>
 
           {/* Confianzones */}
@@ -70,7 +61,17 @@ export default function Hero() {
             </div>
             <div className="flex items-center gap-2">
               <CheckIcon />
-              <span>Todas las marcas</span>
+              <span>Mayoría de marcas</span>
+            </div>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-6 text-neutral-400 text-sm mt-2">
+            <div className="flex items-center gap-2">
+              <CheckIcon />
+              <span>Garantía propia</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckIcon />
+              <span>Servicio garantizado</span>
             </div>
           </div>
         </div>
