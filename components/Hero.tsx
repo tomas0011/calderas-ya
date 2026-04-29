@@ -37,7 +37,7 @@ export default function Hero() {
 
           {/* Subtítulo con diferenciadores */}
           <p className="text-lg sm:text-xl text-neutral-300 mb-8 max-w-2xl mx-auto text-balance">
-            Técnicos capacitados | Atención urgente 24hs | Todas las marcas
+            Técnicos calificados | Atención urgente | Servicio multimarca
           </p>
 
           {/* CTAs - VISIBLES SIN SCROLL */}
@@ -55,7 +55,7 @@ export default function Hero() {
 
           {/* Microcopy de urgencia */}
           <p className="text-green-400 font-medium text-sm mb-8">
-            Sin cargo por visita • Sin compromiso • Orçamento claro
+            Diagnóstico sin cargo • Reparación en el día • Presupuesto claro
           </p>
 
           {/* Confianzones */}
