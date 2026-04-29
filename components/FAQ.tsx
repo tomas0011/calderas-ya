@@ -26,7 +26,8 @@ const faqs = [
   },
   {
     pregunta: "¿Qué marcas reparan?",
-    respuesta: "Baxi, Peisa, Ariston y otras. Si tenés otras, consultanos.",
+    respuesta:
+      "Baxi, Peisa, Ariston, Caldaia y otras. Si tenés otras, consultanos.",
   },
   {
     pregunta: "¿Cuánto cobra el diagnóstico?",

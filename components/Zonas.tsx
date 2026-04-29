@@ -3,29 +3,29 @@
  * Muestra cobertura en texto + permite consultar costo de visita
  */
 
-'use client';
+"use client";
 
-import { useState, useMemo } from 'react';
-import WhatsAppButton from './WhatsAppButton';
-import costRulesData from '@/shared/cost-rules.json';
+import { useState, useMemo } from "react";
+import WhatsAppButton from "./WhatsAppButton";
+import costRulesData from "@/shared/cost-rules.json";
 
 const zonas = [
-  { nombre: 'CABA', icono: '🏙️' },
-  { nombre: 'Zona Norte', icono: '🧭' },
-  { nombre: 'Zona Oeste', icono: '🌅' },
-  { nombre: 'Zona Sur', icono: '🌴' },
+  { nombre: "CABA", icono: "🏙️" },
+  { nombre: "Zona Norte", icono: "🧭" },
+  { nombre: "Zona Oeste", icono: "🌅" },
+  { nombre: "Zona Sur", icono: "🌴" },
 ];
 
 function formatCurrency(value: number): string {
-  return new Intl.NumberFormat('es-AR', {
-    style: 'currency',
-    currency: 'ARS',
+  return new Intl.NumberFormat("es-AR", {
+    style: "currency",
+    currency: "ARS",
     maximumFractionDigits: 0,
   }).format(value);
 }
 
 export default function Zonas() {
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
   const [selectedCity, setSelectedCity] = useState<string | null>(null);
 
   // Ciudades disponibles del JSON
@@ -35,9 +35,9 @@ export default function Zonas() {
   const filteredCities = useMemo(() => {
     if (!search.trim()) return cities.slice(0, 6);
     const query = search.toLowerCase();
-    return cities.filter(city =>
-      city.toLowerCase().includes(query)
-    ).slice(0, 6);
+    return cities
+      .filter((city) => city.toLowerCase().includes(query))
+      .slice(0, 6);
   }, [search]);
 
   const handleCitySelect = (city: string) => {
@@ -45,22 +45,14 @@ export default function Zonas() {
     setSelectedCity(city);
   };
 
-  const costo = selectedCity ? costRulesData[selectedCity as keyof typeof costRulesData] : 0;
+  const costo = selectedCity
+    ? costRulesData[selectedCity as keyof typeof costRulesData]
+    : 0;
   const hasCoverage = selectedCity && costo > 0;
 
   return (
     <section id="zonas" className="py-16 bg-white">
       <div className="container-main">
-        {/* Encabezado */}
-        <div className="text-center mb-10">
-          <h2 className="section-title">
-            Zonas de Cobertura
-          </h2>
-          <p className="section-subtitle">
-            Llegamos a toda CABA y GBA — Visitamos tu domicilio sin cargo
-          </p>
-        </div>
-
         {/* Grid de zonas */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           {zonas.map((zona) => (
@@ -79,7 +71,8 @@ export default function Zonas() {
         {/* Nota de cobertura extendida */}
         <div className="mt-8 bg-primary-50 rounded-xl p-5 text-center">
           <p className="text-primary-700">
-            <span className="font-semibold">¿Tu zona no está en la lista?</span> Consultanos — llegamos a más localidades.
+            <span className="font-semibold">¿Tu zona no está en la lista?</span>{" "}
+            Consultanos — llegamos a más localidades.
           </p>
         </div>
 
