@@ -69,9 +69,9 @@ export default function ProblemasComunes() {
           </div>
 
           {/* Derecha: CTA */}
-          <div className="bg-accent-200/20 backdrop-blur-sm rounded-3xl p-8 flex flex-col items-center justify-center text-center text-neutral-900">
-            <div className="w-16 h-16 bg-accent-500/20 rounded-full flex items-center justify-center mb-6">
-              <svg className="w-8 h-8 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="bg-primary-200/20 backdrop-blur-sm rounded-3xl p-8 flex flex-col items-center justify-center text-center text-neutral-900">
+            <div className="w-16 h-16 bg-primary-500/20 rounded-full flex items-center justify-center mb-6">
+              <svg className="w-8 h-8 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
               </svg>
             </div>
@@ -81,7 +81,7 @@ export default function ProblemasComunes() {
             <p className="text-neutral-700 mb-6 max-w-sm">
               Lo revisamos igual. Contanos qué le pasa a tu caldera y te ayudamos.
             </p>
-            <WhatsAppButton variant="accent" size="lg">
+            <WhatsAppButton variant="primary" size="lg">
               Describir mi problema
             </WhatsAppButton>
             <p className="text-neutral-500 text-sm mt-4">
