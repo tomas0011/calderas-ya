@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import AuroraBackground from "@/components/AuroraBackground";
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
   title: "Norte Clima - Servicio Técnico de Calderas en CABA y GBA",
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body className="antialiased">
         <AuroraBackground />
         {children}
+        <Analytics />
       </body>
     </html>
   );
