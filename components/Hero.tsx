@@ -46,7 +46,7 @@ export default function Hero() {
 
           {/* Microcopy de urgencia */}
           <p className="text-green-400 font-medium text-sm mb-8">
-            Diagnóstico sin cargo • Reparación en el día • Presupuesto claro
+            Reparación en el día • Presupuesto claro
           </p>
 
           {/* Confianzones */}
