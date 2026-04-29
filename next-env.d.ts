@@ -3,6 +3,3 @@
 
 // NOTE: This file should not be edited
 // see https://nextjs.org/docs/basic-features/typescript for more information.
-
-// Declare CSS imports as side-effect modules
-declare module "*.css";

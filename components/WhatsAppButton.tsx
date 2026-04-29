@@ -5,7 +5,7 @@
 import { config } from '@/lib/config';
 
 interface WhatsAppButtonProps {
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary' | 'white' | 'accent';
   size?: 'sm' | 'md' | 'lg';
   children?: React.ReactNode;
   className?: string;
@@ -28,6 +28,8 @@ export default function WhatsAppButton({
   const variantClasses = {
     primary: 'bg-green-500 hover:bg-green-600 text-white',
     secondary: 'bg-white hover:bg-green-50 text-green-700 border-2 border-green-500',
+    white: 'bg-white hover:bg-neutral-100 text-neutral-900',
+    accent: 'bg-accent-500 hover:bg-accent-600 text-white',
   };
 
   return (
