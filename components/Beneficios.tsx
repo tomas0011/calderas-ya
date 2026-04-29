@@ -65,14 +65,16 @@ export default function Beneficios() {
         </div>
 
         {/* Cobertura */}
-        <div className="mt-12 bg-primary-500 rounded-xl p-6 text-center">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-8">
-            <div className="flex items-center gap-2 text-white">
-              <MapPinIcon className="w-6 h-6" />
-              <span className="font-semibold">Atendemos en CABA y GBA</span>
+        <div className="mt-12 bg-neutral-50 border border-neutral-200 rounded-xl p-6">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+            <div className="flex items-center gap-2 text-neutral-700">
+              <MapPinIcon className="w-5 h-5 text-primary-500" />
+              <span className="font-medium">CABA y GBA</span>
             </div>
-            <div className="hidden md:block w-px h-8 bg-white/30" />
-            <p className="text-primary-100 text-sm">Zona Sur según zona</p>
+            <div className="hidden md:block w-px h-6 bg-neutral-300" />
+            <p className="text-neutral-500 text-sm">
+              Zona Sur según disponibilidad
+            </p>
           </div>
         </div>
       </div>
