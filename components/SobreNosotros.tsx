@@ -46,7 +46,7 @@ export default function SobreNosotros() {
               </p>
               <p>
                 Estamos registrados y trabajamos con todas las marcas del
-                mercado: Baxi, Peisa, Ariston, Orbis, Euterma, Caldaia y más.
+                mercado: Baxi, Peisa, Caldaia y más.
               </p>
             </div>
 
