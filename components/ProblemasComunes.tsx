@@ -62,8 +62,8 @@ export default function ProblemasComunes() {
           <div className="h-[400px] rounded-xl">
             <VerticalCarousel
               itemHeight={88}
-              duration={10000}
               className="h-full"
+              speed={30}
             >
               {problemas.map((problema) => (
                 <ProblemaCard

@@ -4,31 +4,53 @@
  */
 
 import { MapPinIcon } from "./Icons";
+import HorizontalCarousel from "./HorizontalCarousel";
 
 const beneficios = [
   {
     titulo: "Vamos a tu casa",
     descripcion:
-      "No necesitás acercar la caldera a ningún lado. Vamos a tu domicilio.",
-    icono: "🏠",
+      "No necesitás trasladar la caldera. En la mayoría de los casos, reparamos en la primera visita."
   },
   {
-    titulo: "Sin llamar a un call center",
+    titulo: "Sin call center",
     descripcion:
-      "Atiende nuestro asesor calificado directamente. Sin intermediarios.",
-    icono: "📞",
+      "Te atiende un asesor calificado. Sin intermediarios ni vueltas."
   },
   {
-    titulo: "Presupuesto detallado",
-    descripcion: "Te mostramos el costo antes de empezar. Sin costos ocultos.",
-    icono: "💰",
+    titulo: "Presupuesto claro y sin sorpresas",
+    descripcion:
+      "Te informamos el costo antes de empezar. Sin cargos ocultos."
   },
   {
-    titulo: "Reparamos en el lugar",
-    descripcion: "En la mayoría de los casos, lo resolvemos en tu casa.",
-    icono: "🔧",
+    titulo: "20+ años de experiencia",
+    descripcion:
+      "Especialistas en Baxi y Caldaia. Diagnóstico rápido y preciso."
   },
+  {
+    titulo: "Asesoramiento en compra e instalación",
+    descripcion:
+      "Te ayudamos a elegir la caldera adecuada y nos encargamos de instalarla."
+  },
+  {
+    titulo: "Turnos ágiles en CABA y GBA",
+    descripcion:
+      "Coordinación rápida por WhatsApp y prioridad para urgencias en temporada alta."
+  }
 ];
+
+function BeneficioCard({ titulo, descripcion }: { titulo: string; descripcion: string }) {
+  return (
+    <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 h-full">
+      <h3 className="text-lg font-bold text-neutral-900 mb-2">
+        {titulo}
+      </h3>
+      <p className="text-neutral-600 text-sm leading-relaxed">
+        {descripcion}
+      </p>
+    </div>
+  );
+}
 
 export default function Beneficios() {
   return (
@@ -44,24 +66,20 @@ export default function Beneficios() {
           </p>
         </div>
 
-        {/* Grid de beneficios */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {beneficios.map((beneficio, index) => (
-            <div
-              key={beneficio.titulo}
-              className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
-            >
-              <div className="text-3xl mb-3">{beneficio.icono}</div>
-
-              <h3 className="text-lg font-bold text-neutral-900 mb-2">
-                {beneficio.titulo}
-              </h3>
-
-              <p className="text-neutral-600 text-sm leading-relaxed">
-                {beneficio.descripcion}
-              </p>
-            </div>
-          ))}
+        {/* Carrusel Horizontal */}
+        <div className="h-[180px] rounded-xl">
+          <HorizontalCarousel
+            className="h-full"
+            speed={60}
+          >
+            {beneficios.map((beneficio) => (
+              <BeneficioCard
+                key={beneficio.titulo}
+                titulo={beneficio.titulo}
+                descripcion={beneficio.descripcion}
+              />
+            ))}
+          </HorizontalCarousel>
         </div>
 
         {/* Cobertura */}

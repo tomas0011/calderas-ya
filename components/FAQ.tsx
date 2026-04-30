@@ -12,36 +12,61 @@ const faqs = [
   {
     pregunta: "¿Pueden venir hoy?",
     respuesta:
-      "Si es urgente, intentamos en el día. Escribinos por WhatsApp y vemos cómo coordinarlo.",
+      "Si es urgente, intentamos coordinar en el día. Escribinos por WhatsApp y vemos disponibilidad.",
   },
   {
-    pregunta: "¿Atienden en mi zona?",
-    // respuesta: 'Atendemos en Zona Oeste, Zona Norte y Zona Sur. También CABA según la zona. Consultanos.',
-    respuesta: (
-      <span>
-        Atendemos en <b>Zona Oeste</b>, <b>Zona Norte</b> y <b>Zona Sur</b>.
-        También <b>CABA</b> según la zona. Consultanos.
-      </span>
-    ),
+    pregunta: "¿Atienden calderas en CABA / GBA?",
+    respuesta:
+      "Sí, trabajamos en todo Capital Federal y Gran Buenos Aires.",
   },
   {
     pregunta: "¿Qué marcas reparan?",
     respuesta:
-      "Baxi, Peisa, Ariston, Caldaia y otras. Si tenés otras, consultanos.",
+      "Trabajamos principalmente con Baxi y Caldaia, pero también atendemos otras marcas. Consultanos.",
   },
   {
-    pregunta: "¿Cuánto cobra el diagnóstico?",
-    respuesta: "Si aprobas el presupuesto, el diagnostico no tiene costo.",
-  },
-  {
-    pregunta: "¿Necesito mover la caldera?",
-    respuesta: "No. Vamos a tu casa y revisamos todo en tu domicilio.",
-  },
-  {
-    pregunta: "¿Cómo coordinarte?",
+    pregunta: "¿Cada cuánto conviene hacer mantenimiento a una caldera?",
     respuesta:
-      "Escribinos por WhatsApp o llamanos. Nos decís qué le pasa a la caldera y acordamos el turno.",
+      "El mantenimiento se recomienda una vez por año, idealmente antes de la temporada de calefacción.",
   },
+  {
+    pregunta: "¿Qué señales indican que mi caldera necesita reparación?",
+    respuesta: (
+      <span>
+        <ul>
+          <li><b>Error o luz roja intermitente</b></li>
+          <li>Sin agua caliente pero con calefacción</li>
+          <li>Sin calefacción pero con agua caliente</li>
+          <li>La caldera no enciende</li>
+        </ul>
+      </span>
+    ),
+  },
+  {
+    pregunta: "¿Cobran diagnóstico o visita?",
+    respuesta:
+      "Realizamos diagnóstico con presupuesto. Si aceptás el trabajo, el diagnóstico no tiene costo. Si no, se cobra la visita según zona.",
+  },
+  {
+    pregunta: "¿Cómo coordinan el servicio?",
+    respuesta:
+      "Podés escribirnos por WhatsApp o llamarnos. Nos contás el problema y coordinamos el turno.",
+  },
+  {
+    pregunta: "¿Necesito trasladar la caldera?",
+    respuesta:
+      "No. Vamos a tu domicilio y en la mayoría de los casos resolvemos en el momento.",
+  },
+  {
+    pregunta: "¿Aceptan transferencia?",
+    respuesta:
+      "Sí, aceptamos efectivo y transferencia bancaria inmediata.",
+  },
+  {
+    pregunta: "¿Entregan comprobante del trabajo?",
+    respuesta:
+      "Sí, entregamos un recibo con garantía del trabajo realizado.",
+  }
 ];
 
 export default function FAQ() {

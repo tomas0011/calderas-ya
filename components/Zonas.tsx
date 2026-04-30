@@ -10,10 +10,10 @@ import WhatsAppButton from "./WhatsAppButton";
 import costRulesData from "@/shared/cost-rules.json";
 
 const zonas = [
-  { nombre: "CABA", icono: "🏙️" },
-  { nombre: "Zona Norte", icono: "🧭" },
-  { nombre: "Zona Oeste", icono: "🌅" },
-  { nombre: "Zona Sur", icono: "🌴" },
+  { nombre: "CABA" },
+  { nombre: "Zona Norte" },
+  { nombre: "Zona Oeste" },
+  { nombre: "Zona Sur" },
 ];
 
 function formatCurrency(value: number): string {
@@ -70,7 +70,6 @@ export default function Zonas() {
               key={zona.nombre}
               className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-100 text-neutral-700 rounded-full text-sm font-medium hover:bg-neutral-200 transition-colors cursor-default"
             >
-              <span>{zona.icono}</span>
               {zona.nombre}
             </span>
           ))}

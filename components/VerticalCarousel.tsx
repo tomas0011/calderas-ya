@@ -1,150 +1,52 @@
+/**
+ * Vertical Carousel - INFINITO con CSS puro
+ * Usa @keyframes para loop verdaderamente infinito sin saltos
+ */
+
 "use client";
 
-import { useEffect, useRef, useState, ReactNode } from "react";
+import { ReactNode } from "react";
 
 interface VerticalCarouselProps {
   children: ReactNode;
-  itemHeight?: number;
-  duration?: number;
-  pauseOnHover?: boolean;
   className?: string;
+  speed?: number; // segundos por scroll completo
+  itemHeight?: number;
 }
 
 export default function VerticalCarousel({
   children,
-  itemHeight = 88,
-  duration = 30000,
-  pauseOnHover = true,
   className = "",
+  speed = 15,
+  itemHeight = 88,
 }: VerticalCarouselProps) {
-  const trackRef = useRef<HTMLDivElement>(null);
-  const [isPaused, setIsPaused] = useState(false);
-  const isDragging = useRef(false);
-  const startY = useRef(0);
-  const startTranslate = useRef(0);
-  const animationRef = useRef<number>();
-  const translateRef = useRef(0);
-  const lastTimeRef = useRef(0);
-
-  // Contar items hijos
+  // Duplicar los items para el loop infinito (4 ciclos)
   const childrenArray = Array.isArray(children) ? children : [children];
-  const totalItems = childrenArray.length;
-  const cycleHeight = totalItems * (itemHeight + 16); // itemHeight + gap
-
-  // Duplicar items para efecto infinito (2 ciclos para suavizar el loop)
-  const duplicatedChildren = [...childrenArray, ...childrenArray];
-
-  useEffect(() => {
-    const track = trackRef.current;
-    if (!track || isPaused || isDragging.current) return;
-
-    const animate = (timestamp: number) => {
-      if (!lastTimeRef.current) lastTimeRef.current = timestamp;
-      
-      const deltaTime = timestamp - lastTimeRef.current;
-      lastTimeRef.current = timestamp;
-
-      // Calcular desplazamiento basado en tiempo
-      const pixelsPerMs = cycleHeight / duration;
-      translateRef.current += pixelsPerMs * deltaTime;
-
-      // Loop infinito sin salto usando módulo
-      const totalCycle = cycleHeight;
-      const currentPosition = translateRef.current % totalCycle;
-      
-      // Usar translateY que es más suave que scrollTop
-      track.style.transform = `translateY(-${currentPosition}px)`;
-      
-      animationRef.current = requestAnimationFrame(animate);
-    };
-
-    animationRef.current = requestAnimationFrame(animate);
-
-    return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
-    };
-  }, [isPaused, cycleHeight, duration]);
-
-  const handleMouseDown = (e: React.MouseEvent) => {
-    isDragging.current = true;
-    startY.current = e.clientY;
-    // Capturar la posición actual normalizada
-    const totalCycle = cycleHeight;
-    startTranslate.current = ((translateRef.current % totalCycle) + totalCycle) % totalCycle;
-    setIsPaused(true);
-  };
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging.current || !trackRef.current) return;
-    
-    const deltaY = e.clientY - startY.current;
-    // Invertir: arrastrar hacia abajo = mover contenido hacia arriba (translateY negativo)
-    const newTranslate = startTranslate.current - deltaY;
-    translateRef.current = newTranslate;
-    
-    // Calcular posición dentro del ciclo
-    const totalCycle = cycleHeight;
-    const normalizedPosition = ((newTranslate % totalCycle) + totalCycle) % totalCycle;
-    trackRef.current.style.transform = `translateY(-${normalizedPosition}px)`;
-  };
-
-  const handleMouseUp = () => {
-    if (isDragging.current) {
-      // Normalizar la posición para que no crezca infinitamente
-      const totalCycle = cycleHeight;
-      translateRef.current = ((translateRef.current % totalCycle) + totalCycle) % totalCycle;
-    }
-    isDragging.current = false;
-    lastTimeRef.current = 0;
-    setIsPaused(false);
-  };
-
-  const handleMouseLeave = () => {
-    if (isDragging.current) {
-      const totalCycle = cycleHeight;
-      translateRef.current = ((translateRef.current % totalCycle) + totalCycle) % totalCycle;
-    }
-    isDragging.current = false;
-    lastTimeRef.current = 0;
-    setIsPaused(false);
-  };
-
-  const handleMouseEnter = () => {
-    if (pauseOnHover && !isDragging.current) {
-      setIsPaused(true);
-    }
-  };
+  const duplicatedItems = [
+    ...childrenArray, 
+    ...childrenArray,
+    ...childrenArray,
+    ...childrenArray
+  ];
 
   return (
     <div 
       className={`relative overflow-hidden ${className}`}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onMouseDown={handleMouseDown}
-      onMouseMove={handleMouseMove}
-      onMouseUp={handleMouseUp}
       style={{ 
-        cursor: isDragging.current ? 'grabbing' : 'grab',
-        userSelect: 'none'
+        maskImage: 'linear-gradient(to bottom, transparent, black 5%, black 95%, transparent)',
+        WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 5%, black 95%, transparent)',
       }}
     >
-      {/* Gradiente superior */}
-      <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-neutral-50 to-transparent z-10 pointer-events-none" />
-      
-      {/* Track con transformación */}
+      {/* Wrapper que animate hacia arriba */}
       <div 
-        ref={trackRef}
-        className="flex flex-col gap-4 py-4 will-change-transform"
-        style={{ 
-          transform: 'translateY(0)',
-          transition: isDragging.current ? 'none' : 'transform 0.1s linear'
+        className="flex flex-col gap-4 will-change-transform"
+        style={{
+          animation: `scroll-up ${speed}s linear infinite`,
         }}
       >
-        {duplicatedChildren.map((child, index) => (
+        {duplicatedItems.map((child: any, index: number) => (
           <div 
-            key={index} 
+            key={child?.key || `item-${index}`}
             className="flex-shrink-0"
             style={{ height: itemHeight }}
           >
@@ -153,8 +55,16 @@ export default function VerticalCarousel({
         ))}
       </div>
 
-      {/* Gradiente inferior */}
-      <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-neutral-50 to-transparent z-10 pointer-events-none" />
+      <style>{`
+        @keyframes scroll-up {
+          0% {
+            transform: translateY(0);
+          }
+          100% {
+            transform: translateY(-50%);
+          }
+        }
+      `}</style>
     </div>
   );
 }

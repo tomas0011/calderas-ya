@@ -22,31 +22,26 @@ export default function SobreNosotros() {
 
             {/* Título */}
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
-              Servicio técnico de calderas
+              Quiénes Somos
               <br />
-              <span className="text-primary-600">en CABA y GBA</span>
+              <span className="text-primary-600">Norte Clima</span>
             </h2>
 
             {/* Descripción */}
             <div className="space-y-4 text-neutral-600 leading-relaxed">
               <p>
-                Somos{" "}
-                <strong className="text-neutral-900">
-                  {config.companyName}
-                </strong>
-                , un equipo de técnicos especializados en reparación de
-                calderas. Atendemos en todo CABA y Gran Buenos Aires con más de
-                10 años de experiencia.
+                En Norte Clima contamos con más de 20 años de trayectoria brindando servicio técnico de calderas en Capital Federal y Gran Buenos Aires. Nacimos en Hurlingham con el objetivo de ofrecer un servicio confiable, transparente y profesional para cada familia.
               </p>
               <p>
-                No somos una empresa grande con call center. Somos técnicos
-                reales que responden directamente, sin intermediarios. Eso nos
-                permite ofrecer un servicio más personalizado y presupuestos más
-                claros.
+                Con el tiempo, fuimos ampliando nuestra propuesta para cubrir las necesidades más frecuentes del hogar:
               </p>
-              <p>
-                Estamos registrados y trabajamos con todas las marcas del
-                mercado: Baxi, Peisa, Caldaia y más.
+              <ul className="list-disc list-inside space-y-2 text-neutral-600 ml-2">
+                <li>Mantenimiento de calderas murales y de piso, trabajando con marcas líderes como <strong>Baxi</strong> y <strong>Caldaia</strong>.</li>
+                <li>Mantenimiento preventivo de pisos radiantes, clave para asegurar eficiencia energética y prolongar la vida útil del sistema.</li>
+                <li>Reparación de climatizadores de pileta, garantizando un funcionamiento seguro y óptimo en todas las temporadas.</li>
+              </ul>
+              <p className="mt-4">
+                Nuestra cobertura abarca todo Capital Federal y el Gran Buenos Aires, incluyendo localidades como Hurlingham, Morón, Moreno, Castelar e Ituzaingó. Gracias a la recomendación de nuestros clientes, seguimos creciendo con el mismo compromiso: garantizar confort, seguridad y eficiencia energética en cada hogar.
               </p>
             </div>
 
@@ -64,7 +59,7 @@ export default function SobreNosotros() {
               </div>
             </div>
 
-            {/* CUIT y registro */}
+            {/* Técnico calificado */}
             <div className="mt-6 flex flex-wrap gap-4 text-sm text-neutral-500">
               <span className="flex items-center gap-1">
                 <svg
@@ -81,22 +76,6 @@ export default function SobreNosotros() {
                   />
                 </svg>
                 Técnico calificado
-              </span>
-              <span className="flex items-center gap-1">
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                  />
-                </svg>
-                CUIT: 20-xxxxx
               </span>
             </div>
 
